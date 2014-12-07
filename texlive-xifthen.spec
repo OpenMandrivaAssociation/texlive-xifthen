@@ -6,7 +6,7 @@
 # catalog-version 1.3
 Name:		texlive-xifthen
 Version:	1.3
-Release:	8
+Release:	9
 Summary:	Extended conditional commands
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/xifthen

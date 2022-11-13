@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/xifthen
-# catalog-date 2009-05-03 12:26:51 +0200
-# catalog-license lppl
-# catalog-version 1.3
 Name:		texlive-xifthen
-Version:	1.4.0
-Release:	2
+Version:	38929
+Release:	1
 Summary:	Extended conditional commands
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/xifthen
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xifthen.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xifthen.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xifthen.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xifthen.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ with the ability of defining new commands to handle complex
 tests. The package requires e-TeX features.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,23 +38,10 @@ tests. The package requires e-TeX features.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.3-2
-+ Revision: 757658
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.3-1
-+ Revision: 719939
-- texlive-xifthen
-- texlive-xifthen
-- texlive-xifthen
-

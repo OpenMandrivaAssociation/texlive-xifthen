@@ -3,7 +3,7 @@ Version:	38929
 Release:	2
 Summary:	Extended conditional commands
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/xifthen
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/xifthen
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xifthen.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xifthen.doc.r%{version}.tar.xz
